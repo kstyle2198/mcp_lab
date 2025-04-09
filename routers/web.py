@@ -32,7 +32,7 @@ class SearchRequest(BaseModel):
 from fastapi import APIRouter, HTTPException
 web_search = APIRouter(prefix="/web_search")
 
-@web_search.post("/", tags=["Web Search"])
+@web_search.post("/", tags=["Search"])
 def do_search(request: SearchRequest):
     try:
         results = do_web_search(request.query)

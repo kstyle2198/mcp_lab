@@ -26,10 +26,10 @@ def create_retriever() -> Any:
     """
     # Step 1: Load Documents
     # PyMuPDFLoader is used to extract text from PDF files
-    loader = PyPDFLoader("./data/llama_safeguard.pdf")
+    loader = PyPDFLoader("./data/Qwen2 Technical Report.pdf")
     docs = loader.load()
 
-    print(docs)
+    # print(docs)
 
     # Step 2: Split Documents
     # Recursive splitter divides documents into chunks with some overlap to maintain context
@@ -58,12 +58,12 @@ mcp = FastMCP(
     "Retriever",
     instructions="A Retriever that can retrieve information from the database.",
     host="0.0.0.0",
-    port=8008,
-)
+    port=8003,
+    )
 
 
 @mcp.tool()
-async def retrieve(query: str) -> str:
+async def qwen_rag(query: str) -> str:
     """
     Retrieves information from the document database based on the query.
 

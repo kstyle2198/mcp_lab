@@ -52,7 +52,7 @@ class SearchRequest(BaseModel):
 from fastapi import APIRouter, HTTPException
 wiki_search = APIRouter(prefix="/wiki_search")
 
-@wiki_search.post("/", tags=["Web Search"])
+@wiki_search.post("/", tags=["Search"])
 def do_search(request: SearchRequest):
     try:
         results = do_wiki_search(request.query)

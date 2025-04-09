@@ -56,7 +56,7 @@ class SearchRequest(BaseModel):
 from fastapi import APIRouter, HTTPException
 arxiv_search = APIRouter(prefix="/arxiv_search")
 
-@arxiv_search.post("/", tags=["Web Search"])
+@arxiv_search.post("/", tags=["Search"])
 def do_search(request: SearchRequest):
     try:
         results = do_arxiv_search(request.query)

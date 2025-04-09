@@ -4,7 +4,7 @@ mcp = FastMCP(
     "Weather",  # Name of the MCP server
     instructions="You are a weather assistant that can answer questions about the weather in a given location.",  # Instructions for the LLM on how to use this tool
     host="0.0.0.0",  # Host address (0.0.0.0 allows connections from any IP)
-    port=8009,  # Port number for the server
+    port=8001,  # Port number for the server
 )
 
 
